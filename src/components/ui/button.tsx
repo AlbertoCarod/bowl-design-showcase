@@ -5,21 +5,26 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        outline: "border border-warm-neutral bg-background hover:bg-warm-beige hover:border-sage transition-smooth",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        ghost: "hover:bg-warm-beige hover:text-text-primary transition-smooth",
+        link: "text-sage underline-offset-4 hover:underline hover:text-accent transition-smooth",
+        // Bowl Collection custom variants
+        hero: "bg-sage text-white hover:bg-accent hover:scale-105 transition-bounce shadow-soft text-base font-semibold",
+        cta: "bg-gradient-sage text-white hover:shadow-soft hover:scale-105 transition-bounce font-medium",
+        minimal: "bg-warm-beige text-text-primary hover:bg-sage hover:text-white transition-smooth border border-warm-neutral hover:border-sage",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-12 rounded-lg px-10 text-base",
         icon: "h-10 w-10",
       },
     },

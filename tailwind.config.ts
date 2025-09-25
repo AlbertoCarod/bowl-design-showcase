@@ -47,6 +47,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Bowl Collection custom colors
+        sage: {
+          DEFAULT: "hsl(var(--sage))",
+          light: "hsl(var(--sage-light))",
+        },
+        'warm-beige': "hsl(var(--warm-beige))",
+        'warm-neutral': "hsl(var(--warm-neutral))",
+        'text-primary': "hsl(var(--text-primary))",
+        'text-secondary': "hsl(var(--text-secondary))",
+        'text-light': "hsl(var(--text-light))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +67,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-sage': 'var(--gradient-sage)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'card': 'var(--shadow-card)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       borderRadius: {
         lg: "var(--radius)",
